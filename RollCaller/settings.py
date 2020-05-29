@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'rollcaller',
         'USER':'postgres',
-        'PASSWORD':'Idawalter@10',
+        'PASSWORD':'',
         'HOST':'localhost',
         'PORT':'5432'
     }
