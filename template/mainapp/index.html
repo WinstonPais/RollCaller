@@ -44,7 +44,25 @@
           <div class="col-md-1">
           </div>
           <div class="col-md-5 relative align-self-center">
-
+						{% if messages %}
+							{% for message in messages %}
+								{% if message.tags == 'success' %}
+									<div class="alert alert-success alert-dismissible fade show" role="alert">
+										{{ message }}
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+								{% else %}
+									<div class="alert alert-danger alert-dismissible fade show" role="alert">
+										{{ message }}
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+								{% endif %}
+							{% endfor %}
+						{% endif %}
             <form action="{% url 'index' %}" style="background:#141414;color:white;" class="rounded pb_form_v1" method="post">
 							{% csrf_token %}
               <h2 class="mb-4 mt-0 text-center">Login</h2>
@@ -54,20 +72,11 @@
               <div class="form-group">
                 <input type="password" class="form-control pb_height-50 reverse" name="password" placeholder="Password" required>
               </div>
-              <div class="form-group">
-                <div class="pb_select-wrap">
-                  <select class="form-control pb_height-50 reverse" style="background-color: black;">
-                    <option value="">Student</option>
-                    <option value="" selected>Staff</option>
-                    <option value="">Parent</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
+              <div class="form-group" style="margin-top:4em">
                 <input type="submit" style="background-color: #464866; "class="btn btn-lg btn-block pb_btn-pill  btn-shadow-blue" value="Login">
               </div>
+							<a href="#"><small class="form-text text-muted">Forgot password?</small></a>
             </form>
-
           </div>
         </div>
       </div>
