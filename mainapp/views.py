@@ -11,7 +11,8 @@ def index(request):
         password = request.POST.get('password')
         user = authenticate(username=username, password=password)
         if user:
-            if request.user.is_superuser:
+            if user.is_superuser:
+                login(request,user)
                 return HttpResponseRedirect('/admin/')
             else:
                 print("not admin")
