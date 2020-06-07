@@ -21,7 +21,8 @@ STATIC_DIR=os.path.join(BASE_DIR,"static")
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3h@tyo9uq!t@kn2tz1pg$j^yj97b5&(x3yg_0k%vj(w701tqlk'
+# SECRET_KEY = '3h@tyo9uq!t@kn2tz1pg$j^yj97b5&(x3yg_0k%vj(w701tqlk'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -136,3 +137,10 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]
+
+#email
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.environ.get('SJEC_EMAIL_ID')
+EMAIL_HOST_PASSWORD = os.environ.get('SJEC_EMAIL_PASSWORD')
+EMAIL_USE_TLS = True

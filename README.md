@@ -1,19 +1,19 @@
 # RollCaller
-A web application to make note of the attendance status for the students of SJEC 
+A web application to make note of the attendance status for the students of SJEC
 
 ## Installation
 To create a conda environment run the below command
 ```
-conda create --name rollcaller --file requirements.txt
+conda create --name rollcaller --file conda-requirements.txt
 ```
 To activate this environment
 ```
 activate rollcaller
 ```
-*Note*
+**Note**
 if you have instaalled a new package run this command to call it to the requirements.txt file
 ```
-conda list -e > requirements.txt
+conda list -e > conda-requirements.txt
 ```
 
 ## Running the project
