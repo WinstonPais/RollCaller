@@ -11,7 +11,7 @@ To activate this environment
 activate rollcaller
 ```
 **Note**
-if you have instaalled a new package run this command to call it to the requirements.txt file
+if you have installed a new package run this command to call it to the requirements.txt file
 ```
 conda list -e > conda-requirements.txt
 ```
