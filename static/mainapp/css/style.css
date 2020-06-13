@@ -1140,12 +1140,12 @@ a {
       -o-transition: .3s all ease-out;
       transition: .3s all ease-out; }
     .pb_navbar.scrolled.pb_scrolled-light {
-      background: #fff !important;
+      background: #141414 !important;
       -webkit-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.15);
       -moz-box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.15);
       box-shadow: 0px 1px 10px -2px rgba(0, 0, 0, 0.15); }
       .pb_navbar.scrolled.pb_scrolled-light .navbar-brand {
-        color: #1d82ff; }
+        color: rgba(255, 255, 255, 0.87); }
       @media (max-width: 991px) {
         .pb_navbar.scrolled.pb_scrolled-light .navbar-nav {
           background: none;
@@ -1153,7 +1153,7 @@ a {
           padding-left: 0rem !important;
           padding-right: 0rem !important; } }
       .pb_navbar.scrolled.pb_scrolled-light ul li a {
-        color: #212529 !important; }
+        color: rgba(255, 255, 255, 0.87) !important; }
         .pb_navbar.scrolled.pb_scrolled-light ul li a:hover, .pb_navbar.scrolled.pb_scrolled-light ul li a:active, .pb_navbar.scrolled.pb_scrolled-light ul li a:focus {
           color: #868e96 !important; }
         .pb_navbar.scrolled.pb_scrolled-light ul li a.active {
